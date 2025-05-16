@@ -1,2 +1,4 @@
 # Mac metadata
 .DS_Store
+# Gradle
+.gradle
