@@ -1,0 +1,16 @@
+networks:
+  test-network:
+    driver: bridge
+services:
+  corda-dev-nw:
+    image: sbir3japan/corda-bootstrapper:local
+    container_name: corda-bootstrapper
+    ports:
+      - "10003:10003"
+      - "10006:10006"
+      - "10009:10009"
+      - "10012:10012"
+    tty: true
+    stdin_open: true
+    networks:
+      - test-network
